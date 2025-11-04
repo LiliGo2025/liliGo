@@ -1,0 +1,33 @@
+
+         /* Ocultar scrollbar para un diseño más limpio */
+        #chat-messages::-webkit-scrollbar {
+            display: none;
+        }
+        #chat-messages {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        /* Animación de apertura */
+        .chat-container.hidden {
+            opacity: 0;
+            transform: scale(0.95) translateY(10px);
+            pointer-events: none;
+        }
+        .chat-container {
+            transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+        /* Estilo para los mensajes del bot */
+        .bot-message {
+            background-color: #f0f9ff; /* Cyan 50 */
+            color: #0E7490; /* Cyan 700 */
+        }
+        /* Estilo para el botón flotante */
+        #chat-toggle-button {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+        #chat-toggle-button:hover {
+            transform: scale(1.05);
+        }
